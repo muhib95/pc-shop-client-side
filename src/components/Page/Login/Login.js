@@ -13,58 +13,88 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <button
-        onClick={() => handlePhone()}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
-      >
-        Login with Phone
-      </button>
+    <div className="flex justify-center">
+      <div>
+        <button
+          onClick={() => handlePhone()}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+        >
+          Login with Phone
+        </button>
 
-      <button
-        onClick={() => handleEmail()}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
-      >
-        Login with Email
-      </button>
+        <button
+          onClick={() => handleEmail()}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+        >
+          Login with Email
+        </button>
+      </div>
       {email && (
-        <div>
-          <form>
-            <input type="email" name="email" placeholder="Enter Email" />
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter Password"
-            />
-            <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
-              type="submit"
-            >
-              Submit
-            </button>
-          </form>
+        <div className="w-1/2">
+          <div className="card-body">
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Email</span>
+              </label>
+              <input
+                type="text"
+                placeholder="email"
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Password</span>
+              </label>
+              <input
+                type="text"
+                placeholder="password"
+                className="input input-bordered"
+              />
+              <label className="label">
+                {/* <a href="#" className="label-text-alt link link-hover">
+                        Forgot password?
+                      </a> */}
+              </label>
+            </div>
+            <div className="form-control mt-6">
+              <button className="btn btn-primary">Login</button>
+            </div>
+          </div>
         </div>
       )}
       {phone && (
-        <div>
-          <form>
-            <input
-              type="number"
-              name="phoneNumber"
-              placeholder="Enter phone Number"
-            />
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter Password"
-            />
-            <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
-              type="submit"
-            >
-              Submit
-            </button>
-          </form>
+        <div className="w-1/2">
+          <div className="card-body">
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Phone Number</span>
+              </label>
+              <input
+                type="text"
+                placeholder="phone number"
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Password</span>
+              </label>
+              <input
+                type="text"
+                placeholder="password"
+                className="input input-bordered"
+              />
+              <label className="label">
+                {/* <a href="#" className="label-text-alt link link-hover">
+                        Forgot password?
+                      </a> */}
+              </label>
+            </div>
+            <div className="form-control mt-6">
+              <button className="btn btn-primary">Login</button>
+            </div>
+          </div>
         </div>
       )}
     </div>
